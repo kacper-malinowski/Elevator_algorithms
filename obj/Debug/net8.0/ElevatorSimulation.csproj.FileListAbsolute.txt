@@ -1,0 +1,14 @@
+/Users/filip/Studia/S21/AO/ElevatorSimulation/bin/Debug/net8.0/ElevatorSimulation
+/Users/filip/Studia/S21/AO/ElevatorSimulation/bin/Debug/net8.0/ElevatorSimulation.deps.json
+/Users/filip/Studia/S21/AO/ElevatorSimulation/bin/Debug/net8.0/ElevatorSimulation.runtimeconfig.json
+/Users/filip/Studia/S21/AO/ElevatorSimulation/bin/Debug/net8.0/ElevatorSimulation.dll
+/Users/filip/Studia/S21/AO/ElevatorSimulation/bin/Debug/net8.0/ElevatorSimulation.pdb
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.AssemblyInfoInputs.cache
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.AssemblyInfo.cs
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.csproj.CoreCompileInputs.cache
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.dll
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/refint/ElevatorSimulation.dll
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.pdb
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.genruntimeconfig.cache
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ref/ElevatorSimulation.dll
