@@ -12,3 +12,4 @@
 /Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.pdb
 /Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.genruntimeconfig.cache
 /Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ref/ElevatorSimulation.dll
+/Users/filip/Studia/S21/AO/ElevatorSimulation/obj/Debug/net8.0/ElevatorSimulation.sourcelink.json

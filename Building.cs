@@ -43,6 +43,7 @@ namespace ElevatorSimulation
             // Parametry symulacji
             int servedPassengersCount = 0;
             double totalWaitingTime = 0; // suma czasu oczekiwania dla obsłużonych pasażerów
+            double totalRideTime = 0;       // suma czasu jazdy dla obsłużonych pasażerów
             int totalDistance = 0;       // suma pięter, jakie przebyła winda
             int currentTime = 0;         // symulowany czas (w sekundach)
 
@@ -77,11 +78,18 @@ namespace ElevatorSimulation
 
                 // Doliczamy czas jeżeli musimy otworzyć drzwi windy na piętrze
                 if(elevator.Passengers.Where(p => p.DestinationFloor == elevator.CurrentFloor).Count() != 0 || (WaitingPassengers[elevator.CurrentFloor].Any())){
-                    Thread.Sleep(1000);
+                    // Thread.Sleep(1000);
                     currentTime += 10;
                 }
 
                 // Pasażerowie wysiadają, jeśli dotarli do celu
+                // Przed usunięciem, obliczamy dla każdego czas jazdy i drogę.
+                var droppingPassengers = elevator.Passengers.Where(p => p.DestinationFloor == elevator.CurrentFloor).ToList();
+                foreach (var p in droppingPassengers)
+                {
+                    int rideTime = currentTime - p.RequestTime;
+                    totalRideTime += rideTime;
+                }
                 if(elevator.Passengers.Where(p => p.DestinationFloor == elevator.CurrentFloor).Count() != 0)
                 {
                     elevator.DropOffPassengers();
@@ -139,16 +147,20 @@ namespace ElevatorSimulation
                 totalDistance += Math.Abs(elevator.CurrentFloor - previousFloor);
 
                 // WIZUALIZACJA
-                Draw(elevator);
-                Thread.Sleep(500);
+                // Draw(elevator);
+                // Thread.Sleep(500);
             }
 
             double averageWaitingTime = totalWaitingTime / servedPassengersCount;
+            double averageRideTime = totalRideTime / servedPassengersCount;
+            double averageTotalTime = averageWaitingTime + averageRideTime;
             double averageDistancePerPassenger = (double)totalDistance / servedPassengersCount;
 
             Console.WriteLine("Symulacja zakończona po obsłużeniu 1000 pasażerów.");
             Console.WriteLine($"Wybrany algorytm sterowania: {selectedAlgorithm}");
             Console.WriteLine($"Średni czas oczekiwania: {averageWaitingTime:F2} sekundy");
+            Console.WriteLine($"Średni czas jazdy windą: {averageRideTime:F2} sekundy");
+            Console.WriteLine($"Średni czas oczekiwania i jazdy windą: {averageTotalTime:F2} sekundy");
             Console.WriteLine($"Średnia droga pokonana przez windę: {averageDistancePerPassenger:F2} pięter na pasażera");
         }
         void Draw(Elevator elevator)
